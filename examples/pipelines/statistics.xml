@@ -1,0 +1,16 @@
+<algorithm type="mesh_reader" name="input">
+  <parameter name="filename" type="string">pragmatic_refine_mesh_decompressed.vtu</parameter>
+</algorithm>
+
+<algorithm type="make_statistic" name="info">
+  <default_source>input</default_source> 
+  <parameter name="metric_type" type="string">min_dihedral_angle</parameter> 
+  <parameter name="histogram_min" type="double">0</parameter>
+  <parameter name="histogram_max" type="double">1</parameter>
+  <parameter name="histogram_bin_count" type="int">100</parameter>
+</algorithm>
+
+<algorithm type="mesh_writer" name="output">
+  <default_source>input</default_source>
+  <parameter name="filename" type="string">output.vtu</parameter>
+</algorithm>
